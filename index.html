@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dennis Maina | Portfolio</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Smooth scrolling -->
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+
+<div id="loader">
+    <h1>Loading...</h1>
+</div>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+    <h2>Dennis Maina</h2>
+
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+    <ul id="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
+</nav>
+
+<!-- HERO -->
+<section id="home" class="hero">
+    <h1><span id="typing"></span></h1>
+    <h3>Web Developer</h3>
+    <p>I build modern, responsive and beautiful websites.</p>
+    <a href="#projects" class="btn">View My Work</a>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+    <h2>About Me</h2>
+    <p>
+        Hi, I’m Dennis Maina — a passionate Information Technology student and aspiring web developer.  
+
+I enjoy creating modern, responsive websites with clean design and functional solutions that make technology more accessible and impactful.  
+
+My goal is to grow into a self-sufficient professional who delivers polished digital experiences and meaningful projects.
+
+    </p>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+    <h2>Skills</h2>
+
+    <div class="skills">
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>JavaScript</span>
+        <span>Git</span>
+        <span>Responsive Design</span>
+    </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+    <h2>Projects</h2>
+
+    <div class="projects-grid">
+
+        <div class="project-card">
+            <img src="https://via.placeholder.com/500x300">
+            <h3>Portfolio Website</h3>
+            <p>A modern personal portfolio built using HTML, CSS and JavaScript.</p>
+            <div class="project-links">
+                <a href="#">Live Demo</a>
+                <a href="https://github.com/Sir-Dennis-Maina">GitHub</a>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <img src="https://via.placeholder.com/500x300">
+            <h3>Landing Page</h3>
+            <p>A clean and responsive landing page design.</p>
+            <div class="project-links">
+                <a href="#">Live Demo</a>
+                <a href="https://github.com/Sir-Dennis-Maina">GitHub</a>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+    <h2>Contact</h2>
+
+    <p>
+        <i class="fas fa-envelope"></i>
+        <a href="mailto:dennismaina216@gmail.com">dennismaina216@gmail.com</a>
+    </p>
+
+    <p>
+        <i class="fab fa-github"></i>
+        <a href="https://github.com/Sir-Dennis-Maina" target="_blank">GitHub</a>
+    </p>
+
+    <p>
+        <i class="fab fa-instagram"></i>
+        <a href="https://instagram.com/d.e.n.n.i.s_maina" target="_blank">Instagram</a>
+    </p>
+
+    <p>
+        <i class="fab fa-linkedin"></i>
+        <a href="https://www.linkedin.com/in/dennis-maina-0a436a338" target="_blank">LinkedIn</a>
+    </p>
+</section>
+
+<footer>
+    <p>© 2026 Dennis Maina</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,453 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: white;
+    background: #000;
+    overflow-x: hidden;
+}
+
+/* =========================
+   🌌 SPACE BACKGROUND
+========================= */
+
+/* =========================
+   🌌 + 🌊 COSMIC OCEAN BACKGROUND
+========================= */
+
+body {
+    background: radial-gradient(circle at top, #021027, #000814);
+    overflow-x: hidden;
+}
+
+/* STARS LAYER (MORE + GLOWING) */
+/* =========================
+   🌈 MULTI-COLOR GLOWING STARS
+========================= */
+
+body::before {
+    content: "";
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+
+    background-image:
+        radial-gradient(2px 2px at 20px 30px, #ffffff, transparent),
+        radial-gradient(2px 2px at 100px 150px, #00ffff, transparent),
+        radial-gradient(2px 2px at 200px 80px, #ff00ff, transparent),
+        radial-gradient(2px 2px at 300px 200px, #00ffcc, transparent),
+        radial-gradient(2px 2px at 400px 120px, #ffff66, transparent),
+        radial-gradient(2px 2px at 500px 50px, #66ccff, transparent);
+
+    background-size: 500px 500px;
+
+    animation: starsMove 70s linear infinite, twinkle 3s ease-in-out infinite alternate;
+
+    filter: drop-shadow(0 0 6px #ffffff)
+            drop-shadow(0 0 10px #00ffff)
+            drop-shadow(0 0 14px #ff00ff);
+
+    opacity: 0.9;
+}
+
+
+/* GLOW PULSE */
+@keyframes twinkle {
+    0% {
+        opacity: 0.5;
+        filter: brightness(1);
+    }
+    50% {
+        opacity: 1;
+        filter: brightness(1.8);
+    }
+    100% {
+        opacity: 0.6;
+        filter: brightness(1.2);
+    }
+}
+
+/* TWINKLING STARS */
+body::before {
+    animation: starsMove 80s linear infinite, twinkle 4s ease-in-out infinite alternate;
+}
+
+@keyframes twinkle {
+    0% { opacity: 0.6; }
+    50% { opacity: 1; }
+    100% { opacity: 0.7; }
+}
+
+@keyframes twinkle {
+    0% { opacity: 0.6; }
+    50% { opacity: 1; }
+    100% { opacity: 0.7; }
+}
+
+/* DEEP SEA GLOW LAYER */
+body {
+    background: radial-gradient(circle at top, #0a0a0a, #000000);
+}
+
+/* DEPTH OVERLAY */
+body::after {
+    backdrop-filter: blur(2px);
+}
+
+/* STAR MOVEMENT */
+@keyframes starsMove {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-1200px);
+    }
+}
+@keyframes stars {
+    from { transform: translateY(0); }
+    to { transform: translateY(-1000px); }
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: rgba(0,0,0,0.5);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+/* MOBILE MENU */
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+nav ul.active {
+    display: flex;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    z-index: 10;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    text-shadow: 0 0 10px rgba(0,255,204,0.5);
+}
+
+.hero h3 {
+    color: #00ffcc;
+}
+
+#typing {
+    border-right: 2px solid #00ffcc;
+    padding-right: 5px;
+}
+
+/* BUTTON */
+.btn {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: #00ffcc;
+    color: black;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+/* =========================
+   SECTIONS
+========================= */
+
+section {
+    padding: 70px 40px;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: 0.8s;
+    position: relative;
+    z-index: 10;
+}
+
+section.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* =========================
+   SKILLS
+========================= */
+
+.skills span {
+    display: inline-block;
+    background: #1a1a1a;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 6px;
+}
+
+/* =========================
+   PROJECTS
+========================= */
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.project-card {
+    background: rgba(255,255,255,0.05);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.project-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.project-links a {
+    color: #00ffcc;
+    margin: 10px;
+    display: inline-block;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    padding: 20px;
+    text-align: center;
+    background: rgba(0,0,0,0.5);
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+    .menu-toggle {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background: rgba(0,0,0,0.9);
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        padding: 10px;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+}
+
+#typing {
+    border-right: 2px solid #00ffcc;
+    padding-right: 5px;
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+    0%, 50%, 100% { border-color: #00ffcc; }
+    25%, 75% { border-color: transparent; }
+}
+
+.hero h1 {
+    font-size: 3rem;
+    color: white;
+    text-shadow: 0 0 8px rgba(0,255,204,0.4);
+}
+
+/* LOADER */
+#loader {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+#loader h1 {
+    color: #00ffcc;
+    font-size: 2rem;
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0% { opacity: 0.3; }
+    50% { opacity: 1; }
+    100% { opacity: 0.3; }
+}
+
+#contact p {
+    margin: 15px 0;
+    font-size: 1.1rem;
+}
+
+#contact i {
+    color: #00ffcc;
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+#contact p:hover i {
+    transform: scale(1.2);
+    transition: 0.3s;
+}
+
+#contact a {
+    color: white;
+    text-decoration: none;
+}
+
+#contact a:hover {
+    color: #00ffcc;
+}
+
+/* =========================
+   ✨ GLOWING NAVBAR
+========================= */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: rgba(0,0,0,0.6);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+
+    border-bottom: 1px solid rgba(0,255,204,0.2);
+    box-shadow: 0 0 10px rgba(0,255,204,0.2);
+}
+
+/* NAV LINKS HOVER GLOW */
+nav a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #00ffcc;
+    text-shadow: 0 0 8px #00ffcc;
+}
+
+
+.btn {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: transparent;
+    color: #00ffcc;
+    border: 1px solid #00ffcc;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: 0.3s;
+
+    box-shadow: 0 0 8px rgba(0,255,204,0.3);
+}
+
+.btn:hover {
+    background: #00ffcc;
+    color: black;
+    box-shadow: 0 0 15px #00ffcc, 0 0 30px #00ffcc;
+}
+
+
+.project-card {
+    background: rgba(255,255,255,0.05);
+    padding: 15px;
+    border-radius: 10px;
+
+    border: 1px solid rgba(0,255,204,0.1);
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    border: 1px solid #00ffcc;
+
+    box-shadow: 
+        0 0 10px rgba(0,255,204,0.3),
+        0 0 20px rgba(0,255,204,0.2),
+        0 0 40px rgba(0,255,204,0.1);
+}
+
+section {
+    border: 1px solid rgba(0,255,204,0.05);
+    border-radius: 10px;
+}
+
+section:hover {
+    border: 1px solid rgba(0,255,204,0.2);
+    box-shadow: 0 0 20px rgba(0,255,204,0.1);
+}
+
+.skills span {
+    display: inline-block;
+    background: #1a1a1a;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 6px;
+
+    border: 1px solid rgba(0,255,204,0.2);
+    transition: 0.3s;
+}
+
+.skills span:hover {
+    background: #00ffcc;
+    color: black;
+
+    box-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc;
+}
